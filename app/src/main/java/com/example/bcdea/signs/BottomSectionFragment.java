@@ -21,8 +21,6 @@ public class BottomSectionFragment extends Fragment {
         View view = inflater.inflate(R.layout.bottom_picture_fragment, container, false);
         witchView = (ImageView) view.findViewById(R.id.witchImageView);
         witchView.setOnClickListener(imageListen);
-
-        ass = MainActivity.getAssets();
         return view;
     }
 
