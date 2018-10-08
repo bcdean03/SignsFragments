@@ -1,5 +1,6 @@
 package com.example.bcdea.signs;
 
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,13 +13,14 @@ import android.widget.Button;
 import android.view.View.OnClickListener;
 
 public class TopSectionFragment extends Fragment {
-
+    private AssetManager ass;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.top_section_fragment, container, false);
 
         Button b = (Button) view.findViewById(R.id.buttonFrag);
+        b.setOnClickListener(practiceListener);
 
         return view;
     }
@@ -30,7 +32,8 @@ public class TopSectionFragment extends Fragment {
     private OnClickListener practiceListener = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            //Toast.makeText(MainActivity.this, "Hello", Toast.LENGTH_LONG).show();
+
+
         }
     };
 }
